@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "ignore": ["public/*"],
+  "ext" : ".js, .json, .yaml, jsx"
+}

@@ -1,0 +1,26 @@
+link(rel='stylesheet', href='/stylesheets/style.css')
+
+
+
+form(action='/search',method='post')
+    div(class="topnav")
+        a(class="active" href="#home") Home
+        a(class="active" href="/history" class = "search") Search History
+        input(type="text" placeholder="Search The Book..",name = 'query')
+        button(type = 'Submit', class = 'submit') Submit
+        div(class = 'avatar')
+            span #{firstName[0]}#{lastName[0]}
+        button(class = 'logout')
+            a(href = "/logout") Logout
+br
+if (data)
+    div(class = "display") 
+        each item in data.items
+            form(action='/book/#{item.id}',method='post')
+                div(class="displayCell")
+                    img(src = "#{item.volumeInfo.imageLinks.thumbnail}" id="displayImage")
+                    h2 #{item.volumeInfo.title}
+                    input(name= "bookData" value = "#{item}" hidden = 'true')
+                    button(type = "Submit") View Details
+else 
+    h1 No Data To Display

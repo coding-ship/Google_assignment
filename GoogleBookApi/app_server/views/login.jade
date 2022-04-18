@@ -1,0 +1,16 @@
+link(rel='stylesheet', href='/stylesheets/style.css')
+
+div
+  h1 Signup in Wyzr Assignment
+  
+   form(action='/',method='post')
+    div(data-role='fieldcontain', class = 'form')
+      fieldset(data-role='controlgroup', class = 'form-data')
+        label(for='name') Name
+           input(id='name',type='text',value='',placeholder='Enter your name',name='name')
+        label(for='email') Email
+           input(id='email',type='text',value='',placeholder='Enter your email',name='email')
+        label(for='password') Password
+           input(id='password',type='password',value='',placeholder='Enter your password',name='password')
+        div(data-role='fieldcontain')   
+            input(type='submit',value='Sign Up',data-transition='fade', data-theme='c')

@@ -1,0 +1,17 @@
+{
+    "source": {
+        "include": ["/myAssignment/app.js", "/myAssignment/app_server/routes/user.js", "/myAssignment/app_server/controllers/user.js"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": ["plugins/markdown"],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true
+    },
+    "opts": {
+        "recurse": true,
+        "destination": "./docs",
+        "readme": "./readme.md"
+    }
+}
